@@ -32,6 +32,11 @@
 // yInter = (slope * x1) - y1
 
 
+//conditions on fractions
+//if numerator % denominator = 0; do numerator/denominator
+//if numerator * denominator > 0 then pos; if not the negative
+
+
 //public String toString()
 
 //On Main
