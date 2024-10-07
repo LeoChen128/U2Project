@@ -4,8 +4,6 @@ public class LinearEquation {
     private double x2;
     private double y2;
     double slope;
-    double yIntercept;
-    double distance;
 
 public LinearEquation(double x1, double x2, double y1, double y2){
     this.x1 = x1;
@@ -35,7 +33,25 @@ public String fractionForm() {
 
 //This would
 public String toString(){
-    return String.format("y = " + fractionForm() + "" + yIntercept);
+    if ((yIntercept()) > 0) {
+        String formatYInter = String.format("+ %.2f", yIntercept());
+        return String.format("y = " + fractionForm() + " " + yIntercept());
+    }
+
+    else if ((yIntercept()) < 0){
+        Math.abs(yIntercept());
+        String formatYInter = String.format("- %.2f", yIntercept());
+        return String.format("y = " + fractionForm() + " " + yIntercept());
+    }
+
+
+    return String.format("y = " + fractionForm() + " " + yIntercept());
 }
+
+
+
+
+
+
 
 }
