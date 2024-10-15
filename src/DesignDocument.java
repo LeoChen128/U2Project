@@ -40,3 +40,6 @@
 //Prints out the following information:
 //first pair, second pair, slope, y inter, equation of line, distance
 
+//find y coordinate from x input:
+//public String findY(double x)
+//

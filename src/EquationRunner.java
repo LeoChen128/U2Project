@@ -17,8 +17,11 @@ public class EquationRunner {
         LinearEquation equation = new LinearEquation(x1, y1, x2, y2);
         System.out.println(equation);
 
-
-
-
+        System.out.println("Enter 3rd x coordinate: ");
+        //turns the String input into a double
+        double xValue = scanner.nextDouble();
+        double yValue = equation.findY(xValue);
+        System.out.println("(" + xValue + ", " + yValue + ")");
+        scanner.close();
     }
 }

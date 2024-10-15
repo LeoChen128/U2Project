@@ -30,34 +30,44 @@ public double yIntercept() {
 //".0" Assures that there is no digits after the decimal point, while f represents floating point number.
 public String fractionFormSlope() {
     double slope = slope();
-    if (slope < 0){
+    if (slope < 0.0){
         Math.abs(slope());
         return String.format("- %.0f/1", slope);
     }
-    if (slope > 0){
-        return String.format("+ %.0f/1", slope);
+    if (slope > 0.0){
+        return String.format("%.0f/1", slope);
     }
     return String.format("%.0f/1", slope);
 
 }
 public String decimalFormYInter(){
-    if ((yIntercept()) > 0) {
+    if ((yIntercept()) > 0.0) {
         return String.format("+ %.2f", yIntercept());
     }
 
-    else if ((yIntercept()) < 0){
+    else if ((yIntercept()) < 0.0){
         Math.abs(yIntercept());
         return String.format("- %.2f", yIntercept());
     }
-    return String.format("%.2f", yIntercept());
+    return "";
+}
+public double findY(double x){
+    double slope = slope();
+    double yValue = slope * x + yIntercept();
+    double round = Math.round(yIntercept() * 100) / 100.0;
+    return round;
 }
 
 public String toString(){
     String yInter = decimalFormYInter();
     String slope = fractionFormSlope();
 
-    return "y = " + fractionFormSlope() + "x " + yInter + "/n"
-            + "Slope: " + slope + "x /n";
+    return  "First Point: (" + x1 + ", " + y1 + ")\n" +
+            "Second Point: (" + x2 + ", " + y2 + ")\n" +
+            "Slope: " + slope + "x \n" +
+            "Equation: y = " + fractionFormSlope() + "x " + yInter + "\n" +
+            "Y-Intercept: " + yInter + "\n" +
+            "Distance: " + distance();
 }
 
 
