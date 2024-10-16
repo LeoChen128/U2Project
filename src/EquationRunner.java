@@ -9,7 +9,7 @@ public class EquationRunner {
 
         System.out.print("Enter the second coordinate point (x2,y2): ");
         String secondPoint = scanner.nextLine();
-        //from the first index it would take the rest of the following value up to the comma.
+        //turns string into double then from the first index it would take the rest of the following value up to the comma.
         double x2 = Double.parseDouble(secondPoint.substring(1, secondPoint.indexOf(',')));
         //takes the index of the comma and takes the value of the next index to the last index excluding the parenthesis.
         double y2 = Double.parseDouble(secondPoint.substring(secondPoint.indexOf(',') + 1, secondPoint.length() - 1));

@@ -2,13 +2,9 @@
 //
 //LinearEquation Class
 //Instance Variables to use:
-//x1,y1,x2,y2
-//double slope
-//double yIntercept
-//double distance
-
+//x1,y1,x2,y2,yInt
 //Constructor
-//  public linearEquation(double x1, double x2, double x2, double y2)
+//  public linearEquation(double x1, double y1, double x2, double y2)
 //     State variables here
 
 //Methods
@@ -39,7 +35,17 @@
 //public String toString()
 //Prints out the following information:
 //first pair, second pair, slope, y inter, equation of line, distance
+//add extra conditional if extra "+" sign
 
 //find y coordinate from x input:
 //public String findY(double x)
-//
+//To find y value: slope * x + yIntercept() then return rounded version
+
+//Runner class
+//import scanner
+//user enters first and second coordinates
+//Uses substring and index of in order to separate values of x1,y1,x2,y2.
+//Use variables into LinearEquation
+//print out equation
+//User inputs 3rd x coordinate
+//Use findY method to find the y value that corresponds to the x value
